@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_6" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d8d63896-4ac5-42f4-8c34-2d553888549d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<queryString language="xls">
+		<![CDATA[]]>
+	</queryString>
+	<field name="Офиси" class="java.lang.String"/>
+	<field name="Пари" class="java.lang.Double"/>
+	<group name="Офиси">
+		<groupExpression><![CDATA[$F{Офиси}]]></groupExpression>
+	</group>
+	<background>
+		<band height="454" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="41" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="-20" width="595" height="61" backcolor="#FFF305" uuid="9b5c93e3-830e-4be9-9771-947613ab7fad"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="-20" y="-10" width="595" height="30" uuid="065fb6e9-f923-4586-83dc-d0ea02574e10"/>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" size="22"/>
+				</textElement>
+				<text><![CDATA[Диаграма на приходите за всеки офис]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="230" splitType="Stretch">
+			<pie3DChart>
+				<chart evaluationTime="Report">
+					<reportElement x="110" y="10" width="364" height="220" uuid="e80306a3-d7e7-49e5-bb34-96a93b1503d6"/>
+					<chartTitle color="#030303"/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset resetType="Report"/>
+					<keyExpression><![CDATA[$F{Пари}]]></keyExpression>
+					<valueExpression><![CDATA[$F{Пари}]]></valueExpression>
+					<labelExpression><![CDATA[$F{Офиси}]]></labelExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot/>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+		</band>
+	</summary>
+</jasperReport>
